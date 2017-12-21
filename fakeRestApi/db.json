@@ -1,0 +1,14 @@
+{
+    "offices": [
+        { "id": "088", "city": "Ahoskie", "primaryPhone": "252-123-4567" },
+        { "id": "021", "city": "Archdale", "primaryPhone": "336-234-5678" },
+        { "id": "174", "city": "Chapel Hill", "primaryPhone": "919-345-6789" },
+        { "id": "036", "city": "King", "primaryPhone": "336-456-7890" },
+        { "id": "245", "city": "Swan Quarter", "primaryPhone": "252-567-8901" }
+    ],
+    "users": [
+        { "id": "P12345F", "name": "Pat Verbeek", "workPhone": "919-123-4567" },
+        { "id": "P23456F", "name": "Bob Marley", "workPhone": "910-656-4567" },
+        { "id": "P34567F", "name": "Rosey Spikes", "workPhone": "828-343-1253" }
+    ]
+}

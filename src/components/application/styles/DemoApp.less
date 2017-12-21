@@ -1,0 +1,30 @@
+//variables
+@tableColor: rgba(255, 255, 255, 0.7);
+//mixins
+#tableRows() {
+    border: 0px;
+}
+
+//nested styles
+.tableContainer {
+    width: 100%;
+    table {
+        width: 100%;
+        text-align: center;
+        background-color: @tableColor;
+        #tableRows;
+        tbody {
+            #tableRows;
+            tr {
+                #tableRows;
+                td {
+                    #tableRows;
+                    padding: 10px;
+                }
+            }
+            tr:hover {
+                background-color: darken(@tableColor, 50%);
+            }
+        }
+    }
+}
