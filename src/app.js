@@ -38,7 +38,7 @@ const WebPart = function () {
     let tableObject;
     buildAjaxCall(function (result) {
         myLoc = JSON.parse(result);
-
+        console.log(myLoc);
     });
 };
 
@@ -46,9 +46,8 @@ WebPart.call();
 
 
 buildTableComponent(function (result) { //callback function returns the DOM target for your app           
-    ReactDOM.render(<
-        DemoApp products={myLoc}
-    />,
+    ReactDOM.render(
+        <DemoApp products={PRODUCTS} />,
         document.getElementById(result)
     );
 });
