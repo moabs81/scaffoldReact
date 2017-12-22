@@ -1,14 +1,26 @@
 {
     "offices": [
-        { "id": "088", "city": "Ahoskie", "primaryPhone": "252-123-4567" },
-        { "id": "021", "city": "Archdale", "primaryPhone": "336-234-5678" },
-        { "id": "174", "city": "Chapel Hill", "primaryPhone": "919-345-6789" },
-        { "id": "036", "city": "King", "primaryPhone": "336-456-7890" },
-        { "id": "245", "city": "Swan Quarter", "primaryPhone": "252-567-8901" }
+        { "id": "088", "region": "Orange", "city": "Ahoskie", "primaryPhone": "252-555-1111" },
+        { "id": "209", "region": "Black", "city": "Archdale", "primaryPhone": "336-555-2222" },
+        { "id": "165", "region": "Orange", "city": "Barco", "primaryPhone": "252-555-3333" },
+        { "id": "011", "region": "Green", "city": "Butner", "primaryPhone": "919-555-4444" },
+        { "id": "174", "region": "Green", "city": "Chapel Hill", "primaryPhone": "919-555-5555" },
+        { "id": "119", "region": "Red", "city": "Clemmons", "primaryPhone": "336-555-8888" },
+        { "id": "231", "region": "Black", "city": "Granite Falls", "primaryPhone": "828-555-9999" },
+        { "id": "212", "region": "Red", "city": "King", "primaryPhone": "336-555-6666" },
+        { "id": "039", "region": "Red", "city": "Lexington", "primaryPhone": "704-555-0764" },
+        { "id": "245", "region": "Red", "city": "Swan Quarter", "primaryPhone": "252-555-7777" }
     ],
     "users": [
         { "id": "P12345F", "name": "Pat Verbeek", "workPhone": "919-123-4567" },
         { "id": "P23456F", "name": "Bob Marley", "workPhone": "910-656-4567" },
         { "id": "P34567F", "name": "Rosey Spikes", "workPhone": "828-343-1253" }
+    ],
+    "warnings": [
+        { "level": "warning", "source": "Accounting", "Message": "WE DON'T HAVE THE RECEIPTS YET" },
+        { "level": "warning", "source": "Human Resources", "Message": "SICK DAYS ARE FOR THE WEAK" },
+        { "level": "information", "source": "Accounting", "Message": "We have the receipts now, sorry for shouting" },
+        { "level": "warning", "source": "Network Services", "Message": "ALL CRITICAL SYSTEMS HAVE FAILED" },
+        { "level": "information", "source": "My Manager", "Message": "You are my second favorite employee" }
     ]
 }

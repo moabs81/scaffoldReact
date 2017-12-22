@@ -8,7 +8,7 @@ const apiCall = function() {
     };
     if (this.error) {
         getData.addEventListener('error', this.error);
-    };
+    };    
     getData.open(this.method, this.baseURI + this.searchURI);
     getData.send();
 };

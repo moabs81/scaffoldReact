@@ -16,7 +16,7 @@ class TableRows extends Component {
 
 class DemoApp extends Component {
     render() {
-        //console.log(this.props);
+        console.log(this.props);
         const rows = [];
         this.props.products.forEach(element => {
             rows.push(<TableRows category={element.category} price={element.price} name={element.name} />);

@@ -6,8 +6,7 @@ import { apiCall } from './components/application/jsModules/ajax';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DemoApp from './components/application/DemoApp';
-
-let myLoc;
+import WebPart from './components/webPart/jsModules/WebPart';
 
 const PRODUCTS = [
     { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
@@ -17,8 +16,6 @@ const PRODUCTS = [
     { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
     { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' }
 ];
-console.log(PRODUCTS);
-
 
 const buildAjaxCall = function (cbReturn) {
     const buildAPIReq = {
@@ -26,28 +23,27 @@ const buildAjaxCall = function (cbReturn) {
         //baseURI: 'http://localhost:3000',
         searchURI: '/offices',
         method: 'GET',
-        success: function (result) {
-            cbReturn(result.currentTarget.responseText);
+        success: function (result) {            
+            cbReturn(result);
         }
     };
     apiCall.call(buildAPIReq);
 };
 
-const WebPart = function () {
-    const targetDiv = this;
-    let tableObject;
-    buildAjaxCall(function (result) {
-        myLoc = JSON.parse(result);
-        console.log(myLoc);
-    });
-};
-
-WebPart.call();
-
-
 buildTableComponent(function (result) { //callback function returns the DOM target for your app           
-    ReactDOM.render(
-        <DemoApp products={PRODUCTS} />,
-        document.getElementById(result)
-    );
+    const targetDiv = result;
+    buildAjaxCall(function (result) {                        
+        ReactDOM.render(
+            <WebPart data={JSON.parse(result.currentTarget.responseText)}/>,
+            document.getElementById(targetDiv)
+        );
+    });
+    setInterval(function(){
+        buildAjaxCall(function (result) {                        
+            ReactDOM.render(
+                <WebPart data={JSON.parse(result.currentTarget.responseText)}/>,
+                document.getElementById(targetDiv)
+            );
+        });
+    }, 120000);
 });
